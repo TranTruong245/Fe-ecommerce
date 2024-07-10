@@ -15,7 +15,7 @@ function CommentProduct(props) {
                             </div>
                             <div className="media-body">
                                 <h4>Blake Ruiz</h4>
-                                <h5>12th Feb, 2017 at 05:56 pm</h5>
+                                <h5>12th Feb, 2024 at 05:56 pm</h5>
                                 <a className="reply_btn" href="#">
                                     Phản hồi
                                 </a>

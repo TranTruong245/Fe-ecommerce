@@ -36,7 +36,7 @@ function ProductFeature(props) {
     };
 
     return (
-        <section className="feature_product_area">
+        <section>
             <div className="container">
                 <HeaderContent mainContent={props.title} infoContent="Bạn sẽ không thất vọng khi lựa chọn">
                     {' '}

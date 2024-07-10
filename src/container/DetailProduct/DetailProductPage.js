@@ -15,16 +15,31 @@ function DetailProductPage(props) {
     const { id } = useParams();
     const [user, setUser] = useState({});
     const [dataProductRecommend, setdataProductRecommend] = useState([]);
-    useEffect(async () => {
-        const userData = JSON.parse(localStorage.getItem('userData'));
-        if (userData) {
-            fetchProductFeature(userData.id);
-            setUser(userData);
+    // useEffect(async () => {
+    //     const userData = JSON.parse(localStorage.getItem('userData'));
+    //     if (userData) {
+    //         fetchProductFeature(userData.id);
+    //         setUser(userData);
+    //     }
+
+    //     window.scrollTo(0, 0);
+
+    //     fetchDetailProduct();
+    // }, []);
+    useEffect(() => {
+        async function fetchData() {
+            const userData = JSON.parse(localStorage.getItem('userData'));
+            if (userData) {
+                await fetchProductFeature(userData.id);
+                setUser(userData);
+            }
+
+            window.scrollTo(0, 0);
+
+            await fetchDetailProduct();
         }
 
-        window.scrollTo(0, 0);
-
-        fetchDetailProduct();
+        fetchData();
     }, []);
     let sendDataFromInforDetail = (data) => {
         setdataDetailSize(data);

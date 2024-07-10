@@ -1,9 +1,10 @@
 import React from 'react';
 import ItemProduct from '../Product/ItemProduct';
 import HeaderContent from '../Content/HeaderContent';
+import './NewProductFeature.scss';
 function NewProductFeature(props) {
     return (
-        <section className="new_product_area ">
+        <section className="new_product_area">
             <div className="container">
                 <HeaderContent mainContent={props.title} infoContent={props.description}>
                     {' '}
@@ -18,6 +19,8 @@ function NewProductFeature(props) {
                                         <ItemProduct
                                             id={item.id}
                                             key={index}
+                                            width={300}
+                                            height={419}
                                             type="col-lg-3 col-md-3"
                                             name={item.name}
                                             img={item.productDetail[0].productImage[0].image}

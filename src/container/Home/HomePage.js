@@ -40,7 +40,6 @@ function HomePage(props) {
         fetchDataBrand();
         fetchProductFeature();
         fetchProductNew();
-
         window.scrollTo(0, 0);
     }, []);
     let fetchBlogFeature = async () => {
@@ -91,7 +90,7 @@ function HomePage(props) {
             </Slider>
 
             <MainFeature></MainFeature>
-            <ProductFeature title={'Gợi ý sản phẩm'} data={dataProductRecommend}></ProductFeature>
+            <NewProductFeature title={'Gợi ý sản phẩm'} data={dataProductRecommend}></NewProductFeature>
             <ProductFeature title={'Sản phẩm đặc trưng'} data={dataProductFeature}></ProductFeature>
             <NewProductFeature
                 title="Sản phẩm mới"
@@ -102,5 +101,4 @@ function HomePage(props) {
         </div>
     );
 }
-
 export default HomePage;
