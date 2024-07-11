@@ -234,7 +234,7 @@ function DetailOrder(props) {
                     <div className="content-top" style={{ display: 'flex', gap: '10px' }}>
                         <span>Phương Thức Thanh Toán</span>
                         <div className="box-type-payment active">
-                            {DataOrder.isPaymentOnlien === 0 ? 'Thanh toán tiền mặt' : 'Thanh toán online'}
+                            {DataOrder.isPaymentOnlien == 0 ? 'Thanh toán tiền mặt' : 'Thanh toán onlien'}
                         </div>
                     </div>
                     <div className="content-top" style={{ display: 'flex', gap: '10px' }}>

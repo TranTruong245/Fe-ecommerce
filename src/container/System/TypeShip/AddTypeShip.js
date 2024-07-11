@@ -10,7 +10,7 @@ import { toast } from 'react-toastify';
 import { useParams } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 
-import moment from 'moment';
+// import moment from 'moment';
 const AddTypeShip = (props) => {
     const [isActionADD, setisActionADD] = useState(true);
 
@@ -26,7 +26,7 @@ const AddTypeShip = (props) => {
                 setisActionADD(false);
                 let typeship = await getDetailTypeShipByIdService(id);
                 if (typeship && typeship.errCode === 0) {
-                    setInputValues({ ...inputValues, ['type']: typeship.data.type, ['price']: typeship.data.price });
+                    setInputValues({ ...inputValues, type: typeship.data.type, price: typeship.data.price });
                 }
             };
             fetchDetailTypeShip();
@@ -47,8 +47,8 @@ const AddTypeShip = (props) => {
                 toast.success('Thêm loại ship thành công');
                 setInputValues({
                     ...inputValues,
-                    ['type']: '',
-                    ['price']: '',
+                    type: '',
+                    price: '',
                 });
             } else if (res && res.errCode === 2) {
                 toast.error(res.errMessage);
