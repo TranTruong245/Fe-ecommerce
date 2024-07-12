@@ -20,7 +20,7 @@ function NewProductFeature(props) {
                                             id={item.id}
                                             key={index}
                                             width={300}
-                                            height={419}
+                                            height={300}
                                             type="col-lg-3 col-md-3"
                                             name={item.name}
                                             img={item.productDetail[0].productImage[0].image}

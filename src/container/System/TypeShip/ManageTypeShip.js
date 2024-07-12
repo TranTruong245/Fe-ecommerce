@@ -74,7 +74,7 @@ const ManageTypeShip = () => {
             offset: '',
             keyword: '',
         });
-        if (res && res.errCode == 0) {
+        if (res && res.errCode === 0) {
             await CommonUtils.exportExcel(res.data, 'Danh sách loại ship', 'ListTypeShip');
         }
     };

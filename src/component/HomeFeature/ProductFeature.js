@@ -52,7 +52,7 @@ function ProductFeature(props) {
                                         id={item.id}
                                         key={index}
                                         width={300}
-                                        height={419}
+                                        height={300}
                                         type="col-lg-4 col-md-6"
                                         name={item.name}
                                         img={item.productDetail[0].productImage[0].image}
