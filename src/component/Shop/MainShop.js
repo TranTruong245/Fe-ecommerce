@@ -126,17 +126,19 @@ function MainShop(props) {
                         dataProduct.length > 0 &&
                         dataProduct.map((item, index) => {
                             return (
-                                <ItemProduct
-                                    id={item.id}
-                                    key={index}
-                                    width={'255px'}
-                                    height={'254px'}
-                                    type="col-lg-4 col-md-6"
-                                    name={item.name}
-                                    img={item.productDetail[0].productImage[0].image}
-                                    discountPrice={item.productDetail[0].discountPrice}
-                                    price={item.productDetail[0].originalPrice}
-                                ></ItemProduct>
+                                <div className="col-lg-4 col-md-6">
+                                    <ItemProduct
+                                        id={item.id}
+                                        key={index}
+                                        width={'270px'}
+                                        height={'270px'}
+                                        type=""
+                                        name={item.name}
+                                        img={item.productDetail[0].productImage[0].image}
+                                        discountPrice={item.productDetail[0].discountPrice}
+                                        price={item.productDetail[0].originalPrice}
+                                    ></ItemProduct>
+                                </div>
                             );
                         })}
                 </div>
