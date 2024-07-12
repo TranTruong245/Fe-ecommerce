@@ -1,26 +1,33 @@
 .box-productFeature {
+    position: relative; /* Thêm position relative để các mũi tên có thể được căn chỉnh dựa trên container này */
+
     .slick-prev {
         z-index: 50 !important;
-        left: 7px !important;
+        left: 10px !important; /* Căn chỉnh lại khoảng cách từ bên trái */
         height: 48px !important;
         width: 44px !important;
 
-        top: 206px;
+        top: 50%; /* Căn giữa theo chiều dọc */
+        transform: translateY(-50%); /* Điều chỉnh vị trí chính xác để căn giữa theo chiều dọc */
     }
+
     .slick-prev::before,
     .slick-next::before {
         font-size: 50px;
-        color: #333 !important;
+        color: #333 !important; /* Màu của mũi tên */
     }
 
     .slick-next {
-        right: 57px !important;
+        right: 10px !important; /* Căn chỉnh lại khoảng cách từ bên phải */
         z-index: 50 !important;
         height: 48px !important;
         width: 44px !important;
-        top: 206px;
+
+        top: 50%; /* Căn giữa theo chiều dọc */
+        transform: translateY(-50%); /* Điều chỉnh vị trí chính xác để căn giữa theo chiều dọc */
     }
-    .slick-disable {
+
+    .slick-disabled {
         display: none !important;
     }
 }

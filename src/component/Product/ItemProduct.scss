@@ -13,3 +13,61 @@
         text-overflow: ellipsis;
     }
 }
+
+.product-btm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px; /* Adjust padding as needed */
+    box-sizing: border-box;
+
+    .price-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .discount-price {
+            color: #32cd32; /* Lime green color */
+            font-weight: bold;
+            font-size: 16px;
+            margin-right: 8px;
+        }
+
+        del {
+            color: #999999; /* Gray color for original price */
+            font-size: 14px;
+        }
+    }
+}
+
+.single-product {
+    border: 1px solid #eaeaea;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    padding: 0; /* Remove padding */
+    box-sizing: border-box;
+
+    &:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-img {
+        height: 270px; /* Hoặc kích thước bạn muốn */
+        width: 270px; /* 100% để phù hợp với bố cục */
+        img {
+            // object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .p_icon {
+        display: none;
+    }
+
+    &:hover .p_icon {
+        display: block;
+    }
+}

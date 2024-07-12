@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+// import React, { useEffect, useState } from 'react';
 import ItemProduct from '../Product/ItemProduct';
 import HeaderContent from '../Content/HeaderContent';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './ProductFeature.scss';
-import { getProductFeatureService } from '../../services/userService';
+// import { getProductFeatureService } from '../../services/userService';
 function ProductFeature(props) {
     let settings = {
         dots: false,
@@ -17,17 +17,11 @@ function ProductFeature(props) {
             {
                 breakpoint: 1200,
                 settings: {
-                    slidesToShow: 4,
-                },
-            },
-            {
-                breakpoint: 992,
-                settings: {
                     slidesToShow: 3,
                 },
             },
             {
-                breakpoint: 768,
+                breakpoint: 992,
                 settings: {
                     slidesToShow: 2,
                 },
@@ -42,7 +36,7 @@ function ProductFeature(props) {
     };
 
     return (
-        <section>
+        <section className="feature_product_area">
             <div className="container">
                 <HeaderContent mainContent={props.title} infoContent="Bạn sẽ không thất vọng khi lựa chọn">
                     {' '}
@@ -54,11 +48,13 @@ function ProductFeature(props) {
                             // props.data.length > 3 &&
                             props.data.map((item, index) => {
                                 return (
-                                    <div className="col-lg-4 col-md-6 col-sm-12" key={index}>
+                                    <div className="col-lg-4 col-md-6 col-xl-3 col-sm-12">
                                         <ItemProduct
                                             id={item.id}
-                                            width={255}
-                                            height={255}
+                                            key={index}
+                                            width={270}
+                                            height={270}
+                                            type=""
                                             name={item.name}
                                             img={item.productDetail[0].productImage[0].image}
                                             price={item.productDetail[0].originalPrice}
