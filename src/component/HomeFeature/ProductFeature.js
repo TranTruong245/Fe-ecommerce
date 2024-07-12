@@ -54,7 +54,7 @@ function ProductFeature(props) {
                             // props.data.length > 3 &&
                             props.data.map((item, index) => {
                                 return (
-                                    <div className="col-lg-4 col-md-6 col-xl-3 col-sm-12" key={index}>
+                                    <div className="col-lg-4 col-md-6 col-sm-12" key={index}>
                                         <ItemProduct
                                             id={item.id}
                                             width={300}
