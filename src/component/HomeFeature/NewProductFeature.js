@@ -16,17 +16,19 @@ function NewProductFeature(props) {
                                 props.data.length > 0 &&
                                 props.data.map((item, index) => {
                                     return (
-                                        <ItemProduct
-                                            id={item.id}
-                                            key={index}
-                                            width={300}
-                                            height={300}
-                                            type="col-lg-3 col-md-3"
-                                            name={item.name}
-                                            img={item.productDetail[0].productImage[0].image}
-                                            price={item.productDetail[0].originalPrice}
-                                            discountPrice={item.productDetail[0].discountPrice}
-                                        ></ItemProduct>
+                                        <div className="col-lg-3 col-md-4" key={index}>
+                                            <ItemProduct
+                                                id={item.id}
+                                                key={index}
+                                                width={300}
+                                                height={300}
+                                                type=""
+                                                name={item.name}
+                                                img={item.productDetail[0].productImage[0].image}
+                                                price={item.productDetail[0].originalPrice}
+                                                discountPrice={item.productDetail[0].discountPrice}
+                                            ></ItemProduct>
+                                        </div>
                                     );
                                 })}
                         </div>
