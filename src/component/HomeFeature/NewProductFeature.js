@@ -18,8 +18,8 @@ function NewProductFeature(props) {
                                         <div className="col-lg-4 col-md-6 col-sm-12" key={index}>
                                             <ItemProduct
                                                 id={item.id}
-                                                width={300}
-                                                height={300}
+                                                width={255}
+                                                height={255}
                                                 type=""
                                                 name={item.name}
                                                 img={item.productDetail[0].productImage[0].image}

@@ -57,8 +57,8 @@ function ProductFeature(props) {
                                     <div className="col-lg-4 col-md-6 col-sm-12" key={index}>
                                         <ItemProduct
                                             id={item.id}
-                                            width={300}
-                                            height={300}
+                                            width={255}
+                                            height={255}
                                             name={item.name}
                                             img={item.productDetail[0].productImage[0].image}
                                             price={item.productDetail[0].originalPrice}
