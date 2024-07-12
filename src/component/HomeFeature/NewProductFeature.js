@@ -1,7 +1,6 @@
 import React from 'react';
 import ItemProduct from '../Product/ItemProduct';
 import HeaderContent from '../Content/HeaderContent';
-import './NewProductFeature.scss';
 function NewProductFeature(props) {
     return (
         <section className="new_product_area">
@@ -10,16 +9,15 @@ function NewProductFeature(props) {
                     {' '}
                 </HeaderContent>
                 <div className="row">
-                    <div className="col-lg-12 mt-5 mt-lg-0">
+                    <div className="">
                         <div className="row">
                             {props.data &&
                                 props.data.length > 0 &&
                                 props.data.map((item, index) => {
                                     return (
-                                        <div className="col-lg-3 col-md-4" key={index}>
+                                        <div className="col-lg-4 col-md-6 col-xl-3 col-sm-12" key={index}>
                                             <ItemProduct
                                                 id={item.id}
-                                                key={index}
                                                 width={300}
                                                 height={300}
                                                 type=""
