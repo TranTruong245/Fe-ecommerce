@@ -6,7 +6,7 @@ import './LoginWebPage.css';
 import { FacebookLoginButton, GoogleLoginButton } from 'react-social-login-buttons';
 import { handleLoginService, checkPhonenumberEmail, createNewUser } from '../../services/userService';
 import Otp from './Otp';
-import { authentication } from '../../utils/firebase';
+import { auth } from '../../utils/firebase';
 import { signInWithPopup, FacebookAuthProvider, GoogleAuthProvider } from 'firebase/auth';
 const LoginWebPage = () => {
     const [inputValues, setInputValues] = useState({
@@ -119,7 +119,7 @@ const LoginWebPage = () => {
     };
     let signInwithFacebook = () => {
         const provider = new FacebookAuthProvider();
-        signInWithPopup(authentication, provider)
+        signInWithPopup(auth, provider)
             .then((re) => {
                 LoginWithSocial(re);
             })
@@ -160,7 +160,7 @@ const LoginWebPage = () => {
     };
     let signInwithGoogle = async () => {
         const provider = new GoogleAuthProvider();
-        signInWithPopup(authentication, provider)
+        signInWithPopup(auth, provider)
             .then(async (re) => {
                 LoginWithSocial(re);
             })
